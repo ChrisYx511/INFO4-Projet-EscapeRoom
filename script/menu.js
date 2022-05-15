@@ -2,6 +2,7 @@ const gameContainerPreStart = document.getElementById("gameContainerPreStart")
 const gameContainerInitialMenu = document.getElementById("gameContainerInitialMenu")
 const gameContainerOpeningVideo = document.getElementById("gameContainerOpeningVideo")
 const initialMenuPressEnter = document.querySelector("#initialMenuPressEnter")
+const initialMenuPressEnterImg = document.querySelector("#initialMenuPressEnter img")
 const initialMenuSelections = document.getElementById("initialMenuSelections")
 const openingVideo = document.getElementById("openingVideo")
 
@@ -53,6 +54,7 @@ function menuSecondStage() {
     
     clearTimeout(opPlayTimeout)
     gameProgress = 1
+    initialMenuPressEnterImg.style.animationDuration = "350ms"
     //Doesn't Work :(
     //document.removeEventListener("keyup", menuEnterKeyPress, false)
     setTimeout (() => {
@@ -65,3 +67,4 @@ function menuSecondStage() {
 function startLevel1 () {
     console.log("This will start level 1 in the future when I get around to it.")
 }
+
