@@ -6,7 +6,27 @@
 }
 
 #gameContainerPreStart {
-    text-align: center;
+    position: relative;
+}
+
+#gameContainerPreStart input {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    background-color: grey;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 2px;
+    border: 2px black solid;
+    
+}
+#gameContainerPreStart input:hover {
+    background-color: darkgray;
+    cursor: pointer;
 }
 
 #initialMenuPressEnter {

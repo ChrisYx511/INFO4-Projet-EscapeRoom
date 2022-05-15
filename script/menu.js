@@ -26,6 +26,7 @@ function launchGame() {
     }, {once: true})
     if (gameProgress === 0) {
         opPlayTimeout = setTimeout (() => {
+            if (gameProgress === 0) {
             gameContainerInitialMenu.style.display ="none"
             gameContainerOpeningVideo.style.display = "inherit"
             menuMusic.pause()
@@ -49,6 +50,7 @@ function launchGame() {
                     launchGame()
                 }
             }, {once: true})
+        }
         }, 30000)
     }
     
@@ -74,6 +76,7 @@ function startPrologue () {
     menuMusic.pause()
     menuMusic.currentTime = 0
     // Basic template for how a sequence can work
+    gameProgress++
     setupArea("prologue1DisplayPage")
     prologue1DisplayPage(currentPage)
 
@@ -110,6 +113,7 @@ function prologue1DisplayPage(index) {
 function playPrologueVideo() {
     gameContainerStartExplaination.style.display = "none"
     gameContainerVideoPrologue.style.display = "inherit"
+    gameProgress++
     prologueVideo.play()
     prologueVideo.volume = 0.75
     prologueVideo.addEventListener("ended", () => {
@@ -118,5 +122,6 @@ function playPrologueVideo() {
 }
 
 function startLevel1() {
+    gameProgress++
     window.location.replace("./dmail1/index.html") 
 }
