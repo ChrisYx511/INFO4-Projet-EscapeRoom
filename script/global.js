@@ -1,4 +1,7 @@
-const menuMusic = new Audio("./assets/sound/menu/bgm.ogg")
+const menuMusic = new Audio("assets/sound/menu/bgm.ogg")
+
+
+
 let opPlayTimeout
 
 // Utility Variables, can be changed at every stage and should be reset after each stage as needed
@@ -15,6 +18,7 @@ let page = 0
  */
 let currentPage = 0
 
+
 // writeOn()
 /**
  * Writes text in dialogue character by character
@@ -26,6 +30,7 @@ let currentPage = 0
  */
 function writeOn(string, outputVariableName, speed, replaceOutput, pageVar) {
     let position = 0
+    let lineEnded = false
     if (replaceOutput === true) {
        eval(`${outputVariableName} = string[position]`)
     }
@@ -44,18 +49,28 @@ function writeOn(string, outputVariableName, speed, replaceOutput, pageVar) {
     document.addEventListener("mousedown", endLine, {once: true})
     document.addEventListener("keyup", endLine, {once: true})
     function endLine(e){
-        if (e.button === 0 || e.key === "Enter") {
-            clearInterval(typingInterval)
-            eval(`${outputVariableName} = string`)
-            setTimeout(() => {
-                eval(`${pageVar}++`)
-            }, 5)
-            
-            console.log("EventListener endLine still active")
+        if (lineEnded === false) {
+            if (e.button === 0 || e.key === "Enter") {
+                clearInterval(typingInterval)
+                eval(`${outputVariableName} = string`)
+                setTimeout(() => {
+                    eval(`${pageVar}++`)
+                }, 5)
+                
+                console.log("EventListener endLine still active")
+            }
         }
+        lineEnded = true
     }
 }
 
+
+// setupArea()
+/**
+ * Sets up an area of the game
+ * @param {String} pageDisplayVar Name of the function that contains the page indexes and display instructions
+ * @param {Boolean} cleanup Whether this is used to initialize or clean up a segment of the game. - True = cleanup
+ */
 function setupArea(pageDisplayVar, cleanup) {
     page = 0
     currentPage = 0

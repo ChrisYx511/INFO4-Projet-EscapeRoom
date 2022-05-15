@@ -1,13 +1,15 @@
 const gameContainerPreStart = document.getElementById("gameContainerPreStart")
 const gameContainerInitialMenu = document.getElementById("gameContainerInitialMenu")
 const gameContainerOpeningVideo = document.getElementById("gameContainerOpeningVideo")
+const gameContainerStartExplaination = document.getElementById("gameContainerStartExplaination")
+const gameContainerVideoPrologue = document.getElementById("gameContainerVideoPrologue")
+
 const initialMenuPressEnter = document.querySelector("#initialMenuPressEnter")
 const initialMenuPressEnterImg = document.querySelector("#initialMenuPressEnter img")
 const initialMenuSelections = document.getElementById("initialMenuSelections")
 const openingVideo = document.getElementById("openingVideo")
-const gameContainerStartExplaination = document.getElementById("gameContainerStartExplaination")
 const startExplainationDialogueParagraph = document.querySelector("#startExplainationDialogue p")
-
+const prologueVideo = document.getElementById("prologueVideo")
 
 function launchGame() {
     gameContainerPreStart.style.display = "none"
@@ -65,7 +67,7 @@ function menuSecondStage() {
     
 }
 // Prologue
-function startLevel1 () {
+function startPrologue () {
     console.log("This will start level 1 in the future when I get around to it.")
     gameContainerInitialMenu.style.display = "none"
     gameContainerStartExplaination.style.display = "inherit"
@@ -85,7 +87,36 @@ function prologue1DisplayPage(index) {
             writeOn(`Ce jeu sera situé au milieu de l'histoire, donc c'est normal que certains indices contextuelles ne vous seront pas compréhensibles. Plusieurs éléments ont été modifiés pour les adapter à la situation.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
             break;
         case 2:
-            writeOn(`À la place de s'évader d'un endroit physique, ce jeu à pour but de tester vos habiletés de voyageurs dans le temps. Vous devez réussir à aider le personnage principal, Rintaro Okabe, à retrouver la ligne du temps <i>Steins Gate</i>.`, "startExplainationDialogueParagraph", 10, true, "page")
+            writeOn(`À la place de s'évader d'un endroit physique, ce jeu à pour but de tester vos habiletés de voyageurs dans le temps. Vous devez réussir à aider le personnage principal, Rintaro Okabe, à retrouver la ligne du temps «Steins Gate», ayant une valeur de divergence relative à alpha de 1.048596.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            break;
+        case 3:
+            writeOn(`Le premier niveau consistera à trouver une combinaison spécifique à envoyer par courriel dans le passer (ce qu'on appelle un dmail, abréviation de DeLorean Mail) pendant que le deuxième consistera à retrouver un IBM5100.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            break;
+        case 4:
+            writeOn(`L'histoire jusqu'à date: Okabe a réussi à défaire tous les messages envoyé dans le passé par ses amis à date pour déjouer SERN (Société Européenne de Recherche Nucléaire) et ses agents, les Rounders. Ce n'était pas sans sacrifices, mais malgré tout, il a réussi. Maintenant, les deux derniers posent une plus grande difficulté: Le contenu du premier et la façon de renverser le 2e est inconnu.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            break;
+        case 5:
+            writeOn(`Des informations plus amples sont disponibles dans la section «Help» du menu principal. Bonne chance! El psy kongroo.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            break;
+        case 6:
+            //Séquence terminée
+            setupArea("prologue1DisplayPage", true)
+            playPrologueVideo()
+            console.log("Sequence successful")
             break;
     }
+}
+
+function playPrologueVideo() {
+    gameContainerStartExplaination.style.display = "none"
+    gameContainerVideoPrologue.style.display = "inherit"
+    prologueVideo.play()
+    prologueVideo.volume = 0.75
+    prologueVideo.addEventListener("ended", () => {
+        startLevel1()
+    }, {once: true})
+}
+
+function startLevel1() {
+    window.location.replace("./dmail1/index.html") 
 }

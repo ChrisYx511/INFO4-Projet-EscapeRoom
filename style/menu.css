@@ -79,3 +79,11 @@
     background-color: black;
     display: none;
 }
+
+#gameContainerVideoPrologue {
+    display: none;
+}
+#prologueVideo {
+    width: 1280px;
+    height: 720px;
+}
