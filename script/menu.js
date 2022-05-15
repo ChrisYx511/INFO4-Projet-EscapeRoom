@@ -71,6 +71,21 @@ function startLevel1 () {
     gameContainerStartExplaination.style.display = "inherit"
     menuMusic.pause()
     menuMusic.currentTime = 0
-    //typeOn(startExplainationDialogueParagraph, `Notes d'experimentation sur FG133 Édition révisée version 3.33: Ceci est une tentative de recréer le jeu «Steins;Gate» en intégrant des éléments «escape room» à celui-ci.`, 100)
-}
+    // Basic template for how a sequence can work
+    setupArea("prologue1DisplayPage")
+    prologue1DisplayPage(currentPage)
 
+}
+function prologue1DisplayPage(index) {
+    switch (index) {
+        case 0:
+            writeOn(`Notes d'experimentation sur FG133 Édition révisée version 3.33: Ceci est une tentative de recréer le jeu «Steins;Gate» en intégrant des éléments «escape room» à celui-ci.`, "startExplainationDialogueParagraph.innerHTML", 20, true, "page")
+            break;
+        case 1: 
+            writeOn(`Ce jeu sera situé au milieu de l'histoire, donc c'est normal que certains indices contextuelles ne vous seront pas compréhensibles. Plusieurs éléments ont été modifiés pour les adapter à la situation.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            break;
+        case 2:
+            writeOn(`À la place de s'évader d'un endroit physique, ce jeu à pour but de tester vos habiletés de voyageurs dans le temps. Vous devez réussir à aider le personnage principal, Rintaro Okabe, à retrouver la ligne du temps <i>Steins Gate</i>.`, "startExplainationDialogueParagraph", 10, true, "page")
+            break;
+    }
+}
