@@ -1,12 +1,16 @@
+const gameContainerPreStart = document.getElementById("gameContainerPreStart")
+const gameContainerInitialMenu = document.getElementById("gameContainerInitialMenu")
+const gameContainerOpeningVideo = document.getElementById("gameContainerOpeningVideo")
+const initialMenuPressEnter = document.querySelector("#initialMenuPressEnter")
+const initialMenuSelections = document.getElementById("initialMenuSelections")
+const openingVideo = document.getElementById("openingVideo")
+
 function launchGame() {
-    const gameContainerPreStart = document.getElementById("gameContainerPreStart")
-    const gameContainerInitialMenu = document.getElementById("gameContainerInitialMenu")
-    const gameContainerOpeningVideo = document.getElementById("gameContainerOpeningVideo")
-    const openingVideo = document.getElementById("openingVideo")
     gameContainerPreStart.style.display = "none"
     gameContainerInitialMenu.style.display ="inherit"
     gameContainerOpeningVideo.style.display = "none"
     menuMusic.play()
+    menuMusic.volume = 0.75
     menuMusic.loop = true
     document.addEventListener("keyup", function menuEnterKeyPress(event) {
         if (event.key === "Enter") {
@@ -21,7 +25,9 @@ function launchGame() {
             menuMusic.pause()
             menuMusic.currentTime = 0
             openingVideo.play()
-            openingVideo.addEventListener('ended', (event) => {
+            openingVideo.volume = 0.75
+
+            openingVideo.addEventListener('ended', () => {
                 launchGame()
                 
             }, false)
@@ -44,12 +50,11 @@ function launchGame() {
 
 function menuSecondStage() {
     console.log("menuSecondStage")
+    
     clearTimeout(opPlayTimeout)
     gameProgress = 1
     //Doesn't Work :(
     //document.removeEventListener("keyup", menuEnterKeyPress, false)
-    const initialMenuPressEnter = document.querySelector("#initialMenuPressEnter")
-    const initialMenuSelections = document.getElementById("initialMenuSelections")
     setTimeout (() => {
         initialMenuPressEnter.style.display = "none"
         initialMenuSelections.style.display = "inherit"

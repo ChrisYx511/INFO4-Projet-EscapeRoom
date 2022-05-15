@@ -1,0 +1,8 @@
+/* Styles for the 1st dmail stage */
+
+/*Temporary, for testing, you can change it*/
+#gameContainerDmail1Scene1 {
+    background-image: url(../assets/bg/labo/BG01A.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
