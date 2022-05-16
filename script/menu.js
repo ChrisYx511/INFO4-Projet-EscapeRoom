@@ -117,8 +117,18 @@ function playPrologueVideo() {
     prologueVideo.play()
     prologueVideo.volume = 0.75
     prologueVideo.addEventListener("ended", () => {
+        document.removeEventListener("keyup", skipIntro, {once: true})
+        document.removeEventListener("mousedown", skipIntro, {once: true})
         startLevel1()
+
     }, {once: true})
+    document.addEventListener("keyup", skipIntro, {once: true})
+    document.addEventListener("mousedown", skipIntro, {once: true})
+    function skipIntro(e) {
+        if (e.button === 0 || e.key === "Enter") {
+            startLevel1()
+        }
+    }
 }
 
 function startLevel1() {
