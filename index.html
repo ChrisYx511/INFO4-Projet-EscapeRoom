@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super S;G 8-bit ADV - FG11</title>
+    <title>Steins;Gate - Rebirth of lost theory Project FG133</title>
     <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/menu.css">
 </head>
@@ -17,7 +17,7 @@
         <img src="./assets/bg/menu/press-enter.png" alt="Press Enter">
     </div>
     <div id="initialMenuSelections">
-        <div class="menuButton" id="startButton" onclick="startLevel1()"></div>
+        <div class="menuButton" id="startButton" onclick="startPrologue()"></div>
         <div class="menuButton" id="configButton"></div>
         <div class="menuButton" id="helpButton"></div>
     </div>
@@ -28,7 +28,13 @@
 <div class="gameContainer" id="gameContainerStartExplaination">
     <div class="dialogue" id="startExplainationDialogue">
         <p></p>
+        <div class="characterName">
+            Félix et Chris
+        </div>
     </div>
+</div>
+<div class="gameContainer" id="gameContainerVideoPrologue">
+    <video src="./assets/gfx/prologue02.mp4" id="prologueVideo"></video>
 </div>
 <script src="script/global.js"></script>
 <script src="script/menu.js"></script>
