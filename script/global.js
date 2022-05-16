@@ -18,7 +18,7 @@ let page = 0
  */
 let currentPage = 0
 
-
+const writeOnListener = new AbortController()
 // writeOn()
 /**
  * Writes text in dialogue character by character
@@ -39,15 +39,14 @@ function writeOn(string, outputVariableName, speed, replaceOutput, pageVar) {
             //console.log(string[position])
             position++
             eval(`${outputVariableName} = ${outputVariableName} + string[position]`)
-        } else {
+        } else if(position +1 === string.length) {
             clearInterval(typingInterval)
-            document.removeEventListener("mousedown", endLine, {once: true})
-            document.removeEventListener("keyup", endLine, {once: true})
             eval(`${pageVar}++`)
+            lineEnded = true
         }
     }, speed)
-    document.addEventListener("mousedown", endLine, {once: true})
-    document.addEventListener("keyup", endLine, {once: true})
+    document.addEventListener("mousedown", endLine, {once: true, signal: writeOnListener.signal})
+    document.addEventListener("keyup", endLine, {once: true, signal: writeOnListener.signal})
     function endLine(e){
         if (lineEnded === false) {
             if (e.button === 0 || e.key === "Enter") {
@@ -56,7 +55,7 @@ function writeOn(string, outputVariableName, speed, replaceOutput, pageVar) {
                 setTimeout(() => {
                     eval(`${pageVar}++`)
                 }, 5)
-                
+                console.log(outputVariableName)
                 console.log("EventListener endLine still active")
             }
         }
@@ -64,30 +63,32 @@ function writeOn(string, outputVariableName, speed, replaceOutput, pageVar) {
     }
 }
 
-
+const nextPageListener = new AbortController()
 // setupArea()
 /**
  * Sets up an area of the game
  * @param {String} pageDisplayVar Name of the function that contains the page indexes and display instructions
  * @param {Boolean} cleanup Whether this is used to initialize or clean up a segment of the game. - True = cleanup
  */
-function setupArea(pageDisplayVar, cleanup) {
+function setupArea(pageDisplayVar) {
     page = 0
     currentPage = 0
-    if (cleanup != true) {
-        document.addEventListener("keyup", nextPage, false) 
-        document.addEventListener("mousedown", nextPage, false)
-        function nextPage(e) {
-            if (page != currentPage) {
-                if (e.button === 0 || e.key === "Enter") {
-                    currentPage = page
-                    eval(pageDisplayVar + "(currentPage)")
-                }
+    
+    document.addEventListener ("keyup", nextPage, { signal: nextPageListener.signal })
+    document.addEventListener ("mousedown", nextPage, { signal: nextPageListener.signal })
+    function nextPage(e) {
+        if (page != currentPage) {
+            if (e.button === 0 || e.key === "Enter") {
+                currentPage = page
+                eval(pageDisplayVar + "(currentPage)")
             }
         }
-    } else if (cleanup === true) {
-        document.removeEventListener("keyup", nextPage, false)
-        document.removeEventListener("mousedown", nextPage, false)
     }
+    console.log(pageDisplayVar)
 
+}
+
+function cleanArea() {
+    nextPageListener.abort()
+    writeOnListener.abort()
 }

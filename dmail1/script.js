@@ -3,7 +3,7 @@ const gameContainerDmail1Scene1 = document.getElementById("gameContainerDmail1Sc
 const dmail1Scene1Dialogue = document.getElementById("dmail1Scene1Dialogue")
 const dmail1Scene1DialogueText = document.querySelector("#dmail1Scene1Dialogue p")
 const dmail1Scene1DialogueCharacterName = document.querySelector("#dmail1Scene1Dialogue .characterName")
-const characterSpriteScene1 = document.querySelector("#gameContainerDmail1Scene1 .characterSpriteRight")
+const characterSpriteScene1 = document.querySelector("#gameContainerDmail1Scene1 .characterSpriteCenter")
 
 startArea1()
 ostLaboratory.play()
@@ -44,12 +44,14 @@ function dmail1Area1DisplayPage(index) {
             writeOn(`Complete`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
             break;
         case 6:
-            setupArea("dmail1Area1DisplayPage", true)
+            cleanArea()
             startArea2()
             break;
 
     }
 }
+
+
 const gameContainerDmail1Scene2 = document.getElementById("gameContainerDmail1Scene2")
 const dmail1Dialogue2 = document.querySelector("#gameContainerDmail1Scene2 .dialogue")
 const dmail1Dialogue2Text = document.querySelector("#gameContainerDmail1Scene2 .dialogue p")
@@ -68,6 +70,9 @@ function dmail1Area2DisplayPage(index) {
     switch (index) {
         case 0:
             writeOn("C'est une nouvelle page!!!!!!", "dmail1Dialogue2Text.innerHTML", 10, true, "page")
+            break;
+        case 1:
+            cleanArea()
             break;
     }
 }

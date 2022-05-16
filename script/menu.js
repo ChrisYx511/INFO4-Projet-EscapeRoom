@@ -11,6 +11,7 @@ const openingVideo = document.getElementById("openingVideo")
 const startExplainationDialogueParagraph = document.querySelector("#startExplainationDialogue p")
 const prologueVideo = document.getElementById("prologueVideo")
 
+const menuListeners = new AbortController()
 function launchGame() {
     gameContainerPreStart.style.display = "none"
     gameContainerInitialMenu.style.display ="inherit"
@@ -23,7 +24,7 @@ function launchGame() {
             console.log("Enter detected!")
             menuSecondStage()
         }
-    }, {once: true})
+    }, {once: true, signal: menuListeners.signal})
     if (gameProgress === 0) {
         opPlayTimeout = setTimeout (() => {
             if (gameProgress === 0) {
@@ -37,19 +38,19 @@ function launchGame() {
             openingVideo.addEventListener('ended', () => {
                 launchGame()
                 
-            }, {once: true})
+            }, {once: true, signal: menuListeners.signal})
             document.addEventListener("mousedown", () => {
                     openingVideo.pause()
                     openingVideo.currentTime = 0
                     launchGame()                    
-            }, {once: true})
+            }, {once: true, signal: menuListeners.signal})
             document.addEventListener("keyup", (event) => {
                 if (event.key === "Enter") {
                     openingVideo.pause()
                     openingVideo.currentTime = 0
                     launchGame()
                 }
-            }, {once: true})
+            }, {once: true, signal: menuListeners.signal})
         }
         }, 30000)
     }
@@ -58,7 +59,7 @@ function launchGame() {
 
 function menuSecondStage() {
     console.log("menuSecondStage")
-    
+    menuListeners.abort()
     clearTimeout(opPlayTimeout)
     gameProgress = 1
     initialMenuPressEnterImg.style.animationDuration = "350ms"
@@ -103,7 +104,7 @@ function prologue1DisplayPage(index) {
             break;
         case 6:
             //Séquence terminée
-            setupArea("prologue1DisplayPage", true)
+            cleanArea()
             playPrologueVideo()
             console.log("Sequence successful")
             break;
