@@ -3,6 +3,9 @@
 /*Temporary, for testing, you can change it*/
 #gameContainerDmail1Scene1 {
     background-image: url(../assets/bg/labo/BG01A.PNG);
-    background-size: contain;
-    background-repeat: no-repeat;
+}
+
+#gameContainerDmail1Scene2 {
+    background-image: url(../assets/bg/labo/BG02E2.PNG);
+    display: none;
 }

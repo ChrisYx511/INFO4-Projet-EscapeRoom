@@ -9,6 +9,8 @@ body {
     border: 4px solid black;
     margin: auto;
     position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .phone {
     width: 200px;
@@ -24,13 +26,14 @@ body {
 
 .dialogue {
     width: 1280px;
-    height: 280px;
+    height: 180px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     bottom: 0;
     z-index: 2;
     font-size: 16pt;
+    border-top: 2px #b2b2b2 solid;
     /*This is TEMPORARY*/
     /*background-color: yellow;    */
 }
@@ -44,11 +47,60 @@ body {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    bottom: 5px;
+    bottom: 20px;
     width: 400px;
     height: 20px;
     text-align: center;
     color: white;
+}
+.characterSpriteCenter {
+    width: 768px;
+    height: 720px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+.characterSpriteCenter img {
+    position: absolute;
+    left: 0;
+    right:0;
+    margin: auto;
+    width: 768px;
+    height: 720px;
+    object-fit: cover;
+}
+
+.characterSpriteLeft {
+    width: 768px;
+    height: 720px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+}
+.characterSpriteLeft img {
+    position: absolute;
+    left: 0;
+    margin: auto;
+    width: 768px;
+    height: 720px;
+    object-fit: cover;
+}
+.characterSpriteRight {
+    width: 768px;
+    height: 720px;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+.characterSpriteRight img {
+    position: absolute;
+    left: 0;
+    right:0;
+    margin: auto;
+    width: 768px;
+    height: 720px;
+    object-fit: cover;
 }
 
 @keyframes fadeinandout {
