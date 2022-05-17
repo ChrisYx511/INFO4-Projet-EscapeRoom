@@ -21,7 +21,7 @@ let currentPage = 0
 const writeOnListener = new AbortController()
 // writeOn()
 /**
- * Writes text in dialogue character by character
+ * Writes text in dialogue gradually, letter per letter
  * @param {String} string String to write character per character
  * @param {String} outputVariableName Name of the object to write the string to, in String format
  * @param {Number} speed Delay between characters in ms
@@ -66,9 +66,8 @@ function writeOn(string, outputVariableName, speed, replaceOutput, pageVar) {
 const nextPageListener = new AbortController()
 // setupArea()
 /**
- * Sets up an area of the game
+ * Sets up an area of the game, each area being 1 gameContainer/scene and has pages that follow eachother
  * @param {String} pageDisplayVar Name of the function that contains the page indexes and display instructions
- * @param {Boolean} cleanup Whether this is used to initialize or clean up a segment of the game. - True = cleanup
  */
 function setupArea(pageDisplayVar) {
     page = 0
@@ -88,6 +87,7 @@ function setupArea(pageDisplayVar) {
 
 }
 
+/**Cleans up an area created by setupArea() */
 function cleanArea() {
     nextPageListener.abort()
     writeOnListener.abort()
