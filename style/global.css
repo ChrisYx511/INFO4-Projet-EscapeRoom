@@ -24,6 +24,16 @@ body {
     background-color: grey;
 }
 
+.cellPhone{
+    background-image: url(../assets//gfx/phone.PNG);
+    width: 350px;
+    height: 650px;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    display: none;
+}
+
 .dialogue {
     width: 1280px;
     height: 180px;
