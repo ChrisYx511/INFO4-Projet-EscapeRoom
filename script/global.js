@@ -89,6 +89,8 @@ function setupArea(pageDisplayVar) {
 
 /**Cleans up an area created by setupArea() */
 function cleanArea() {
+    page = 0
+    currentPage = 0
     nextPageListener.abort()
     writeOnListener.abort()
 }
