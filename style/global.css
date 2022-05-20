@@ -23,8 +23,24 @@ body {
     /*This is TEMPORARY*/
     background-color: grey;
 }
+.cellPhone{
+    background-image: url(../assets//gfx/phone.PNG);
+    width: 350px;
+    height: 650px;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    
+}
+.phoneScreen {
+    width: 267px;
+    height: 350px;
+    position: relative;
+    left: 40px;
+    top: 105px;
+    background-color: black;
 
-.dialogue {
+}.dialogue {
     width: 1280px;
     height: 180px;
     position: absolute;
