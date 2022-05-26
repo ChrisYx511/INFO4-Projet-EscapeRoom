@@ -30,17 +30,50 @@ body {
     position: absolute;
     right: 50px;
     bottom: 0;
-    
+    display: none;
 }
-.phoneScreen {
+
+.phoneMailMenu {
     width: 267px;
     height: 350px;
     position: relative;
     left: 40px;
     top: 105px;
-    background-color: black;
+    background-color: white;
+    overflow: scroll;
+    display: none;
+    display: none;
+}
+.phoneMailMenu div{
+    border-bottom: 1px black solid;
+}
+.phoneMailMenu div h3, .phoneMailMenu div h4, .phoneMailMenu div p {
+    margin: 3px;
+}
 
-}.dialogue {
+.phoneMailDetails {
+    width: 267px;
+    height: 350px;
+    position: relative;
+    left: 40px;
+    top: 105px;
+    background-color: white;
+    overflow: scroll;
+    display: none;
+}
+.phoneMailMetadata {
+    height: 70px;
+    padding: 10px;
+    border-bottom: 3px black solid;
+}
+.phoneMailMetadata strong {
+    color: red;
+}
+.phoneMailDetails p {
+    margin: 10px;
+}
+
+.dialogue {
     width: 1280px;
     height: 180px;
     position: absolute;
@@ -122,4 +155,8 @@ body {
 @keyframes fadeinandout {
     0%,100% { opacity: 0; }
     50% { opacity: 1; }
+}
+
+@keyframes shake {
+    
 }

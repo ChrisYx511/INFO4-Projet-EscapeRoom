@@ -10,6 +10,6 @@ function startArea1() {
 function area1DisplayPage(index) {
     switch (index) {
         case 0:
-            writeOn(`.... Est-ce que ça a marché??`,)
+            writeOn(`.... Est-ce que ça a marché??`, )
     }
 }
