@@ -1,4 +1,7 @@
 #gameContainerDmail2Scene1 {
     background-color: black;
 }
-
+#gameContainerDmail2Scene2 {
+    display: none;
+    background-image: url(../assets/bg/labo/BG03A4.PNG);
+}
