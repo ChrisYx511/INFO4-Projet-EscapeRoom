@@ -17,3 +17,33 @@
     left: 0;
     bottom: 0;
 }
+#gameContainerDmail2Scene3 {
+    background-image: url(../assets/bg/labo/BG05A1.PNG);
+    display: none;
+}
+
+#gameContainerDmail2Scene4 {
+    background-image: url(../assets/bg/labo/BG02A1.PNG);
+    display: none;
+}
+
+#gameContainerDmail2Scene5 {
+    background-image: url(../assets/bg/labo/BG03A4.PNG);
+    display: none;
+}
+
+#ibm5100BoxLocation {
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    left: 338px;
+    top: 10px;
+    border: 2px #55574f solid;
+    color: #55576f;
+    display: none;
+    transform: rotate(9deg);
+}
+
+#ibm5100BoxLocation:hover {
+    cursor: pointer;
+}

@@ -1,7 +1,7 @@
 const menuMusic = new Audio("assets/sound/menu/bgm.ogg")
 let selectedRingtone = 2
 let selectedTextTone = 3
-
+let volume = 0.75
 
 let opPlayTimeout
 

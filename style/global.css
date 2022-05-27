@@ -31,6 +31,7 @@ body {
     right: 50px;
     bottom: 0;
     display: none;
+    z-index: 1;
 }
 
 .phoneMailMenu {
@@ -114,13 +115,12 @@ body {
     left: 0;
     right:0;
     margin: auto;
-    width: 1080px;
     height: 720px;
     object-fit: cover;
 }
 
 .characterSpriteLeft {
-    width: 768px;
+    width: 1080px;
     height: 720px;
     left: 0;
     margin: auto;
@@ -130,12 +130,11 @@ body {
     position: absolute;
     left: 0;
     margin: auto;
-    width: 768px;
     height: 720px;
     object-fit: cover;
 }
 .characterSpriteRight {
-    width: 768px;
+    width: 1080px;
     height: 720px;
     right: 0;
     margin: auto;
@@ -143,10 +142,8 @@ body {
 }
 .characterSpriteRight img {
     position: absolute;
-    left: 0;
-    right:0;
+    right: 0;
     margin: auto;
-    width: 768px;
     height: 720px;
     object-fit: cover;
 }
