@@ -21,33 +21,37 @@ function dmail1Area1DisplayPage(index) {
             writeOn("Ughhhhhhh...... my head...", "dmail1Scene1DialogueText.innerHTML", 10, true, "page")
             break;
         case 1:
-            dmail1Scene1DialogueCharacterName.innerHTML = "Mayuri"
-            writeOn(`« Okarin! Ça va?? »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
-            characterSpriteScene1.innerHTML = `<img src="../assets/char/MAY/std/may_alc04a.png" alt="">`
+            dmail1Scene1DialogueCharacterName.innerHTML = "Kurisu"
+            writeOn(`« Bon, le prochain dmail a annulé est celui de Moeka n'est-ce pas? »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            characterSpriteScene1.innerHTML = `<img src="../assets/char/MAY/std/crs_alb01a.png" alt="">`
             break;
         case 2:
             dmail1Scene1DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(`« Ça va, plus ou moins... il est quel heure? »`, "dmail1Scene1DialogueText.innerHTML", 50, true, "page")
+            writeOn(`« Ouais... mais je dois trouver un moyen de localiser Moeka. »`, "dmail1Scene1DialogueText.innerHTML", 50, true, "page")
             break;
         case 3:
-            dmail1Scene1DialogueCharacterName.innerHTML = "Mayuri"
-            characterSpriteScene1.innerHTML = '<img src="../assets/char/MAY/std/may_alb03a.png" alt="">'
-            writeOn(`« Tu dormais sur le sofa et puis t'a juste fait 'fwooop'. J'étais tellement inquiète! »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            dmail1Scene1DialogueCharacterName.innerHTML = "Kurisu"
+            characterSpriteScene1.innerHTML = '<img src="../assets/char/MAY/std/crs_alb01a.png" alt="">'
+            writeOn(`« Comment comptes-tu faire? »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
             break;
         case 4:
             //Interaction here
-            dmail1Scene1DialogueCharacterName.innerHTML = ""
-            writeOn(`Veuillez confirmer que vous n'êtes pas un agent de l'organisation qui travaille dans les ténèbres pour entraver à notre travaille de recherche.`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            dmail1Scene1DialogueCharacterName.innerHTML = "Rintaro"
+            writeOn(`« Je me rappelle qu'elle m'a dit une fois qu'elle travaillait au » `, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
             break;
         case 5:
-            alert("Hello World")
-            writeOn(`Complete`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            dmail1Dialogue2CharacterName.innerHTML = "Kurisu"
+            writeOn(`« Oh. Tu pourrais aller demander au boss s'il pourrait te donner son adresse. »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            characterSpriteScene1.innerHTML = '<img src="../assets/char/MAY/std/crs_alb01a.png" alt="">'
             break;
         case 6:
+            dmail1Dialogue2CharacterName.innerHTML = "Rintaro"
+            writeOn(`« Allons demander sur place. »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            break;
+        case 7:
             cleanArea()
             startArea2()
             break;
-
     }
 }
 
@@ -69,10 +73,33 @@ function startArea2() {
 function dmail1Area2DisplayPage(index) {
     switch (index) {
         case 0:
-            writeOn("C'est une nouvelle page!!!!!!", "dmail1Dialogue2Text.innerHTML", 10, true, "page")
+            dmail1Dialogue2CharacterName.innerHTML = "Boss"
+            writeOn(`« Bonjour monsieur, puis-je vous aider? »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
             break;
         case 1:
+            dmail1Dialogue2CharacterName.innerHTML = "Rintaro"
+            writeOn(`« Bonjour, est-ce qu'il y aurait sans par hasard une femme nommée Moeka qui travaillait ici? »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            break;
+        case 2:
+            dmail1Dialogue2CharacterName.innerHTML = "Boss"
+            writeOn(`« Moeka? Oui, je crois bien. Pourquoi veux-tu savoir son adresse? C'est un peu sussy de ta part. »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            break;
+        case 3:
+            case 1:
+            dmail1Dialogue2CharacterName.innerHTML = "Rintaro"
+            writeOn(`« Uhh... ne vous inquiètez pas monsieur, tout est sous contrôle. Croyez moi, hail Hydra. »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            break;
+        case 4:
+            dmail1Dialogue2CharacterName.innerHTML = "Boss"
+            writeOn(`« Ohhh je voiiis. Elle habite dans le coin, dans un appartement sur la rue  »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            break;
+        case 5:
+            dmail1Dialogue2CharacterName.innerHTML = "Rintaro"
+            writeOn(`« D'accord Merci. »`, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            break;
+        case 5:
             cleanArea()
+            startArea3()
             break;
     }
 }
