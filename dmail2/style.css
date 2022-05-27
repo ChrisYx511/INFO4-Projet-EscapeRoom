@@ -47,3 +47,19 @@
 #ibm5100BoxLocation:hover {
     cursor: pointer;
 }
+
+#gameContainerDmail2Scene6 {
+    display: none;
+}
+#gameContainerDmail2Scene6::before {
+    background-image: url(../assets/bg/labo/BG02A1.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fadein 3s;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}

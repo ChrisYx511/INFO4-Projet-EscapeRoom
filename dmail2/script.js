@@ -73,9 +73,7 @@ function area2DisplayPage(index) {
             area2Msg1.style.display = "inherit"
             textTone.pause()
             textTone.currentTime = 0
-            setTimeout(() => {
-                writeOn(`(Continuez pour fermer le message...)`, "area2Text.innerHTML", 10, true, "page")
-            }, 1000)
+            writeOn(`(Continuez pour fermer le message...)`, "area2Text.innerHTML", 10, true, "page")
             break;
         case 5:
             area2CellPhone.style.display = "none"
@@ -98,9 +96,7 @@ function area2DisplayPage(index) {
             area2Msg2.style.display = "inherit"
             textTone.pause()
             textTone.currentTime = 0
-            setTimeout(() => {
-                writeOn(`(Continuez pour fermer le message...)`, "area2Text.innerHTML", 10, true, "page")
-            }, 1000)
+            writeOn(`(Continuez pour fermer le message...)`, "area2Text.innerHTML", 10, true, "page")
             break;
         case 9:
             area2CellPhone.style.display = "none"
@@ -251,5 +247,62 @@ function area5DisplayPage(index) {
         case 7: 
             writeOn(`« Il est allé a Comima, tu te souviens pas? »`, "area5Text.innerHTML", 20, true, "page")
             break;
+        case 8:
+            writeOn(`Merde, c'est vrai. Et il ne sera pas de retour avant le soir.`, "area5Text.innerHTML", 20, true, "page")
+            area5CharacterName.innerHTML = ""
+            break;
+        case 9:
+            writeOn(`Mais je n'ai pas le temps d'attendre. Donc...`, "area5Text.innerHTML", 20, true, "page")
+            break;
+        case 10:
+            writeOn(`Je pris le casque d'écoute sur la table et fis un nouveau saut dans le temps.`, "area5Text.innerHTML", 20, true, "page")
+            break;
+        case 11:
+            setTimeout(() => {
+                gameContainerDmail2Scene5.style.animation = "fadein 3s"
+                gameContainerDmail2Scene5.style.backgroundImage = "none"
+                gameContainerDmail2Scene5.style.backgroundColor = "black"
+                writeOn(`(Recul de 2 jours dans le temps, 13 aout...)`, "area5Text.innerHTML", 20, true, "page")
+            }, 1000)
+            break;
+        case 12:
+            cleanArea()
+            startArea6()
+            break;
+        
+        }
+}
+const gameContainerDmail2Scene6 = document.getElementById("gameContainerDmail2Scene6")
+const area6Text = document.querySelector("#gameContainerDmail2Scene6 .dialogue p")
+const area6CharacterName = document.querySelector("#gameContainerDmail2Scene6 .characterName")
+const area6CharacterSpriteCenter = document.querySelector("#gameContainerDmail2Scene6 .characterSpriteCenter")
+const area6CharacterSpriteLeft = document.querySelector("#gameContainerDmail2Scene6 .characterSpriteLeft")
+const area6CharacterSpriteRight = document.querySelector("#gameContainerDmail2Scene6 .characterSpriteRight")
+
+function startArea6() {
+    gameContainerDmail2Scene5.style.display = "none"
+    gameContainerDmail2Scene6.style.display = "inherit"
+    setupArea("area6DisplayPage")
+    area6DisplayPage(currentPage)
+}
+function area6DisplayPage(index) {
+    switch (index) {
+        case 0:
+            writeOn(`Le monde reprend ses couleurs lentement autour de moi. Je vois Daru sur son ordi, lisant un autre visual novel. Kurisu dormait sur le sofa, probablement épuisé par son travail sur le Téléph-ondes amélioré toute la nuit.`, "area6Text.innerHTML", 20, true, "page")
+            break;
+        case 1:
+            writeOn(`Tous les membres du labo sont présent, sauf Mayuri. C'est probablement mieux comme ça.`, "area6Text.innerHTML", 20, true, "page")
+            break;
+        case 2:
+            writeOn(`« Daru! Christina! C'est le temps de passer à la dernière étape de »`, "area6Text.innerHTML", 20, true, "page")
+            area6CharacterName.innerHTML = `Rintaro`
+            break;
+        case 3:
+            writeOn(`Kurisu se lève d'un bond, surpris par ma déclaration.`, "area6Text.innerHTML", 20, true, "page")
+            area6CharacterName.innerHTML = ``
+            gameContainerDmail2Scene6.style.animation = "shake 1s"
+            break;
+
+        
     }
 }
