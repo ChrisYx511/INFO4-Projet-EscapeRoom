@@ -1,5 +1,6 @@
 const menuMusic = new Audio("assets/sound/menu/bgm.ogg")
-
+let selectedRingtone = 2
+let selectedTextTone = 3
 
 
 let opPlayTimeout
@@ -18,7 +19,7 @@ let page = 0
  */
 let currentPage = 0
 
-const writeOnListener = new AbortController()
+let writeOnListener = new AbortController()
 // writeOn()
 /**
  * Writes text in dialogue gradually, letter per letter
@@ -63,7 +64,7 @@ function writeOn(string, outputVariableName, speed, replaceOutput, pageVar) {
     }
 }
 
-const nextPageListener = new AbortController()
+let nextPageListener = new AbortController()
 // setupArea()
 /**
  * Sets up an area of the game, each area being 1 gameContainer/scene and has pages that follow eachother
@@ -93,4 +94,27 @@ function cleanArea() {
     currentPage = 0
     nextPageListener.abort()
     writeOnListener.abort()
+    nextPageListener = undefined
+    writeOnListener = undefined
+    writeOnListener = new AbortController()
+    nextPageListener = new AbortController()
+}
+
+function returnRingtone(index) {
+    switch (index) {
+        case 0:
+            return "assets/sound/ringtones/Beginning of Light.ogg";
+        case 1:
+            return "assets/sound/ringtones/Easygoingness.ogg";
+        case 2:
+            return "assets/sound/ringtones/GATE OF STEINER.ogg";
+        case 3:
+            return "assets/sound/ringtones/Over the sky.ogg"
+        case 4:
+            return "assets/sound/ringtones/Precaution.ogg"
+        case 5:
+            return "assets/sound/ringtones/Reunion.ogg"
+        case 6:
+            return "assets/sound/ringtones/Village.ogg"
+    }
 }

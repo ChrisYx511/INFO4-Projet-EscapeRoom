@@ -42,7 +42,6 @@ body {
     background-color: white;
     overflow: scroll;
     display: none;
-    display: none;
 }
 .phoneMailMenu div{
     border-bottom: 1px black solid;
@@ -103,7 +102,7 @@ body {
     color: white;
 }
 .characterSpriteCenter {
-    width: 768px;
+    width: 1080px;
     height: 720px;
     left: 0;
     right: 0;
@@ -115,7 +114,7 @@ body {
     left: 0;
     right:0;
     margin: auto;
-    width: 768px;
+    width: 1080px;
     height: 720px;
     object-fit: cover;
 }
@@ -157,6 +156,7 @@ body {
     50% { opacity: 1; }
 }
 
-@keyframes shake {
-    
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 100;}
 }

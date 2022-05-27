@@ -3,5 +3,17 @@
 }
 #gameContainerDmail2Scene2 {
     display: none;
-    background-image: url(../assets/bg/labo/BG03A4.PNG);
+    
+}
+#gameContainerDmail2Scene2::before {
+    background-image: url(../assets/bg/moekahouse/BG34A.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fadein 4s;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
