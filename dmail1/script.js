@@ -110,9 +110,9 @@ function dmail1Area2DisplayPage(index) {
 }
 
 const gameContainerDmail1Scene3 = document.getElementById("gameContainerDmail1Scene3")
-const dmail1Scene3Dialogue3 = document.querySelector("#gameContainerDmail1Scene3")
-const dmail1Scene3DialogueText = document.querySelector("#gameContainerDmail1Scene3 .dialogue p")
-const dmail1Scene3DialogueCharacterName = document.querySelector("#gameContainerDmail1Scene3 .characterName")
+const dmail1Scene3Dialogue3 = document.querySelector("dmail1Scene3Dialogue")
+const dmail1Scene3DialogueText = document.querySelector("#dmail1Scene3Dialogue p")
+const dmail1Scene3DialogueCharacterName = document.querySelector("#dmail1Scene3Dialogue .characterName")
 const characterSpriteScene3 = document.querySelector("#gameContainerDmail1Scene3 .characterSpriteCenter")
 
 function startArea3(){
