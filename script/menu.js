@@ -17,7 +17,7 @@ function launchGame() {
     gameContainerInitialMenu.style.display ="inherit"
     gameContainerOpeningVideo.style.display = "none"
     menuMusic.play()
-    menuMusic.volume = 0.75
+    menuMusic.volume = volume
     menuMusic.loop = true
     document.addEventListener("keyup", function menuEnterKeyPress(event) {
         if (event.key === "Enter") {
@@ -33,7 +33,7 @@ function launchGame() {
             menuMusic.pause()
             menuMusic.currentTime = 0
             openingVideo.play()
-            openingVideo.volume = 0.75
+            openingVideo.volume = volume
 
             openingVideo.addEventListener('ended', () => {
                 launchGame()
@@ -116,7 +116,7 @@ function playPrologueVideo() {
     gameContainerVideoPrologue.style.display = "inherit"
     gameProgress++
     prologueVideo.play()
-    prologueVideo.volume = 0.75
+    prologueVideo.volume = volume
     prologueVideo.addEventListener("ended", () => {
         document.removeEventListener("keyup", skipIntro, {once: true})
         document.removeEventListener("mousedown", skipIntro, {once: true})
