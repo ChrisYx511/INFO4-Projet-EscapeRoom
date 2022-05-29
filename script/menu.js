@@ -12,6 +12,7 @@ const startExplainationDialogueParagraph = document.querySelector("#startExplain
 const prologueVideo = document.getElementById("prologueVideo")
 
 const menuListeners = new AbortController()
+// Lorsque le jeu est laissé sur le menu pour 30sec, intro joue
 function launchGame() {
     gameContainerPreStart.style.display = "none"
     gameContainerInitialMenu.style.display ="inherit"
@@ -94,10 +95,10 @@ function prologue1DisplayPage(index) {
             writeOn(`À la place de s'évader d'un endroit physique, ce jeu à pour but de tester vos habiletés de voyageurs dans le temps. Vous devez réussir à aider le personnage principal, Rintaro Okabe, à retrouver la ligne du temps «Steins Gate», ayant une valeur de divergence relative à alpha de 1.048596.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
             break;
         case 3:
-            writeOn(`Le premier niveau consistera à trouver une combinaison spécifique à envoyer par courriel dans le passer (ce qu'on appelle un dmail, abréviation de DeLorean Mail) pendant que le deuxième consistera à retrouver un IBM5100.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            writeOn(`Le premier niveau consistera à trouver une combinaison spécifique à envoyer par courriel dans le passer (ce qu'on appelle un dmail, abréviation de DeLorean Mail) pendant que le deuxième consistera à retrouver un IBM5100 et l'utiliser pour finalement s'échaper de la ligne du temps alpha.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
             break;
         case 4:
-            writeOn(`L'histoire jusqu'à date: Okabe a réussi à défaire tous les messages envoyé dans le passé par ses amis à date pour déjouer SERN (Société Européenne de Recherche Nucléaire) et ses agents, les Rounders. Ce n'était pas sans sacrifices, mais malgré tout, il a réussi. Maintenant, les deux derniers posent une plus grande difficulté: Le contenu du premier et la façon de renverser le 2e est inconnu.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            writeOn(`L'histoire jusqu'à date: Okabe a réussi à défaire tous les messages envoyé dans le passé par ses amis à date pour déjouer SERN (Société Européenne de Recherche Nucléaire) et ses agents, les Rounders. Ce n'était pas sans sacrifices, mais malgré tout, il a réussi. Maintenant, les deux derniers posent une plus grande difficulté: Le contenu du premier et les détails pour renverser le deuxième sont inconnus.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
             break;
         case 5:
             writeOn(`Des informations plus amples sont disponibles dans la section «Help» du menu principal. Bonne chance! El psy kongroo.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
