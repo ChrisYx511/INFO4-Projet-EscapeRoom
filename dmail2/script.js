@@ -1,3 +1,6 @@
+// Chris Yang - 2022-05-29 - DMAIL 2 (NIVEAU 2)
+
+
 const ostChaosMind = new Audio("../assets/sound/standard/20 - Chaos mind.ogg")
 const ostGateOfSteiner = new Audio("../assets/sound/standard/2 - Gate of Steiner - Main Theme.ogg")
 const ostHack = new Audio("../assets/sound/standard/13 - Hack.ogg")
