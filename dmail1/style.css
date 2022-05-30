@@ -1,6 +1,4 @@
-/* Styles for the 1st dmail stage */
-
-/*Temporary, for testing, you can change it*/
+/* Félix - 2022-05-30 - DMAIL 1 (NIVEAU 1) */
 #gameContainerDmail1Scene1 {
     background-image: url(../assets/bg/labo/BG01A.PNG);
 }
@@ -20,5 +18,9 @@
 }
 #voiceOnlyArea4 {
     background-image: url(../assets/gfx/voiceOnly.jpg);
+    display: none;
+}
+#gameContainerDmail1Scene5 {
+    background-image: url(../assets/bg/coinlocker/BG21N.PNG);
     display: none;
 }
