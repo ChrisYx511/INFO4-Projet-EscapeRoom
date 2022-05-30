@@ -1,3 +1,5 @@
+// Félix Wu - 2022-05-30 - DMAIL 1 (NIVEAU 1)
+
 var ostLaboratory = new Audio("../assets/sound/standard/3 - Laboratory.ogg")
 const gameContainerDmail1Scene1 = document.getElementById("gameContainerDmail1Scene1")
 const dmail1Scene1Dialogue = document.getElementById("dmail1Scene1Dialogue")
@@ -17,7 +19,7 @@ function startArea1() {
 function dmail1Area1DisplayPage(index) {
     switch (index) {
         case 0:
-            writeOn("J'exlique pour la cinquième fois a Kurisu la situation, comment Mayuri va mourir, Sern nous traque et les dmails a ammuler.", "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            writeOn("J'exlique pour la cinquième fois à Kurisu la situation, comment Mayuri va mourir, Sern nous traque et les dmails a annuler.", "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
             break;
         case 1:
             dmail1Scene1DialogueCharacterName.innerHTML = "Kurisu"
@@ -35,7 +37,7 @@ function dmail1Area1DisplayPage(index) {
             break;
         case 4:
             dmail1Scene1DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` Si je me rappelle bien, elle m'a dit une fois qu'elle travaillait au `, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
+            writeOn(` Si je me rappelle bien, elle m'a dit une fois qu'elle travaillait au MacDonald. `, "dmail1Scene1DialogueText.innerHTML", 30, true, "page")
             break;
         case 5:
             dmail1Scene1DialogueCharacterName.innerHTML = "Rintaro"
@@ -89,11 +91,11 @@ function dmail1Area2DisplayPage(index) {
         case 3:
             case 1:
             dmail1Scene2DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(`« Uhh... ne vous inquiètez pas monsieur, tout est sous contrôle. Croyez moi, hail Hydra. »`, "dmail1Scene2DialogueText.innerHTML", 30, true, "page")
+            writeOn(`« Uhh... ne vous inquiètez pas monsieur, tout est sous contrôle. Nous avons perdu contact, donc... ouais. »`, "dmail1Scene2DialogueText.innerHTML", 30, true, "page")
             break;
         case 4:
             dmail1Scene2DialogueCharacterName.innerHTML = "Boss"
-            writeOn(`« Ohhh je voiiis. Elle habite dans le coin, dans un appartement sur la rue  »`, "dmail1Scene2DialogueText.innerHTML", 30, true, "page")
+            writeOn(`« Ohhh je voiiis. Elle habite dans le coin, dans un appartement à deux coins de rue d'ici.  »`, "dmail1Scene2DialogueText.innerHTML", 30, true, "page")
             break;
         case 5:
             dmail1Scene2DialogueCharacterName.innerHTML = "Rintaro"
@@ -128,15 +130,15 @@ function dmail1Area3DisplayPage(index) {
         case 1:
             dmail1Scene3DialogueCharacterName.innerHTML = ""
             gameContainerDmail1Scene3.style.backgroundImage = "url(../assets/bg/moekahouse/BG33N2.PNG)"
-            writeOn(` Je dois vite aller la convaincre de me dire quel etait son dmail. `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
+            writeOn(` Je dois vite aller la convaincre de me dire quel était son dmail. `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 2:
             dmail1Scene3DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` knock knock « Allo? Moeka? T'es la? » `, "dmail1Scene3DialogueText.innerHTML", 80, true, "page")
+            writeOn(` knock knock « Allo? Moeka? T'es là? » `, "dmail1Scene3DialogueText.innerHTML", 80, true, "page")
             break;
         case 3:
             dmail1Scene3DialogueCharacterName.innerHTML = ""
-            writeOn(` Personne repond... je vais quand meme rentrer heheheha. `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
+            writeOn(` Personne répond... je vais quand même rentrer heheheha. `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 4:
             dmail1Scene3DialogueCharacterName.innerHTML = "Rintaro"
@@ -145,16 +147,16 @@ function dmail1Area3DisplayPage(index) {
             break;
         case 5:
             dmail1Scene3DialogueCharacterName.innerHTML = "Moeka"
-            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE/moe_ala02a.png">`
-            writeOn(`FB FB FB FB FB... s'il te plait repond moi... `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_ala02a.png">`
+            writeOn(`FB FB FB FB FB... s'il te plait répond moi... `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 6:
             dmail1Scene3DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Moeka! Moeka!!! Ecoute moi! C'est ugent!!  » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
+            writeOn(` « Moeka! Moeka!!! Écoute moi! C'est ugent!!  » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 7:
             dmail1Scene3DialogueCharacterName.innerHTML = "Moeka"
-            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE/moe_ala02a.png">`
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_ala02a.png">`
             writeOn(` « FB FB FB...  » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 8:
@@ -163,38 +165,38 @@ function dmail1Area3DisplayPage(index) {
             break;
         case 9:
             dmail1Scene3DialogueCharacterName.innerHTML = "Moeka"
-            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE/moe_alb0xx.png">`
-            writeOn(` « REDONNE MOI CA ESPECE DE PITE!! » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb0xx.png">`
+            writeOn(` « REDONNE MOI CA ESPÈCE DE- » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 10:
             dmail1Scene3DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Mais ptn ecoute moi! c'est urgent!! Laisse moi t'expliquer un peu! » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
+            writeOn(` « Mais écoute moi! c'est urgent!! Laisse moi t'expliquer un peu! » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 11:
             dmail1Scene3DialogueCharacterName.innerHTML = "Moeka"
-            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE/moe_alb05a.png">`
-            writeOn(` « Depeche toi, je t'ecoute... » `, "dmail1Scene3DialogueText.innerHTML", 50, true, "page")
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb05a.png">`
+            writeOn(` « Dépeche toi, je t'écoute... » `, "dmail1Scene3DialogueText.innerHTML", 50, true, "page")
             break;
         case 12:
             dmail1Scene3DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Te rappeles-tu avoir envoye un dmail? Il faut que tu me dises c'est quoi. La vie de Mayuri depend de ca... » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
+            writeOn(` « Te rappeles-tu avoir envoyé un dmail? Il faut que tu me dises c'est quoi. La vie de Mayuri dépend de ca... » `, "dmail1Scene3DialogueText.innerHTML", 30, true, "page")
             break;
         case 13:
             dmail1Scene3DialogueCharacterName.innerHTML = "Moeka"
-            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE/moe_alb05a.png">`
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb05a.png">`
             writeOn(` « ... » `, "dmail1Scene3DialogueText.innerHTML", 100, true, "page")
             break;
         case 14:
             dmail1Scene3DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Eille! Dit quelque chose! Ecoute moi stp, j'ai besoin de ta cooperation.  » `, "dmail1Scene3DialogueText.innerHTML", 20, true, "page")
+            writeOn(` « Eille! Dit quelque chose! Écoute moi stp, j'ai besoin de ta coopération.  » `, "dmail1Scene3DialogueText.innerHTML", 20, true, "page")
             break;
         case 15:
             dmail1Scene3DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « En annulant le dmail que tu as envoye, nous allons pouvoir mettre fin a cette folie. » `, "dmail1Scene3DialogueText.innerHTML", 50, true, "page")
+            writeOn(` « En annulant le dmail que tu as envoyé, nous allons pouvoir mettre fin à cette folie. » `, "dmail1Scene3DialogueText.innerHTML", 50, true, "page")
             break;
         case 16:
             dmail1Scene3DialogueCharacterName.innerHTML = "Moeka"
-            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE/moe_alb03a.png">`
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb03a.png">`
             writeOn(` « ...je ne recois que des ordres de FB. » `, "dmail1Scene3DialogueText.innerHTML", 50, true, "page")
             break;
         case 17:
@@ -202,7 +204,8 @@ function dmail1Area3DisplayPage(index) {
             writeOn(` « FB...? » `, "dmail1Scene3DialogueText.innerHTML", 100, true, "page")
             break;
         case 18:
-            writeOn(` Je la frappa de toute mes forces et me precipita a l'exterieur. Mon coup devrait la tenir KO queques minutes HAHA.`, "dmail1Scene3DialogueText.innerHTML", 70, true, "page")
+            writeOn(` Je la frappa de toute mes forces et me precipita à l'extérieur. Mon coup devrait la tenir KO queques minutes hehe. `, "dmail1Scene3DialogueText.innerHTML", 70, true, "page")
+            characterSpriteScene3.innerHTML = "none"
             gameContainerDmail1Scene3.style.backgroundImage = "url(../assets/bg/moekahouse/BG33N2.PNG)"
             break;
         case 19:
@@ -255,11 +258,11 @@ function area4DisplayPage(index) {
             break;
         case 4:
             dmail1Scene4DialogueCharacterName.innerHTML = ""
-            writeOn(`Je vais faire en sorte qu'elle envoie un message a FB disant de ne pas aller chercher le IBM 500. Ainsi, ils ne seront jamais aller le chercher.`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(`Je vais faire en sorte qu'elle envoie un message à FB disant de ne pas aller chercher le IBM 500. Ainsi, ils ne seront jamais aller le chercher.`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 5:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(`« Je suis pret. Est-tu en position? »`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(`« Je suis prêt. Es-tu en position? »`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 6:
             dmail1Scene4DialogueCharacterName.innerHTML = "Kurisu"
@@ -267,7 +270,7 @@ function area4DisplayPage(index) {
             break;
         case 7:
             dmail1Scene4DialogueCharacterName.innerHTML = ""
-            writeOn(`moment de silence...`, "dmail1Scene4DialogueText.innerHTML", 100, true, "page")
+            writeOn(` Moment de silence...`, "dmail1Scene4DialogueText.innerHTML", 100, true, "page")
             break;
         case 8:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
@@ -275,28 +278,27 @@ function area4DisplayPage(index) {
             break;
         case 9:
             dmail1Scene4DialogueCharacterName.innerHTML = "Kurisu"
-            writeOn(`« Ca pas marche!? »`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(`« Ça pas marché!? »`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 10:
             dmail1Scene4DialogueCharacterName.innerHTML = ""
-            writeOn(` Je ne comprend pas... cela n'a pas marche. Peut-etre que le dmail envoye par Moeka n'est pas la source principale du probleme...? `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` Je ne comprend pas... cela n'a pas marché. Peut-être que le dmail envoyé par Moeka n'est pas la source principale du problème...? `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 11:
             dmail1Scene4DialogueCharacterName.innerHTML = "Kurisu"
-            writeOn(` « Qu'est-ce qui n'aurait pas marche? » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` « Qu'est-ce qui n'aurait pas marché? » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 12:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Je pense que nous avons pas resolu le probleme comme il fallait...  » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` « Je pense que nous avons pas résolu le problème comme il fallait...  » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 13:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
             writeOn(` « Attend un peu, je vais aller revoir Moeka.  » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 14:
-
             dmail1Scene4DialogueCharacterName.innerHTML = ""
-            writeOn(` J'espere qu'elle va bien, je l'ai peu-etre frappait trop fort, qui sait... `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` J'espère qu'elle va bien, je l'ai peut-être frappait trop fort, qui sait... `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             gameContainerDmail1Scene4.style.backgroundImage = "url(../assets/bg/moekahouse/BG33N2.PNG)"
             cellulaireArea4.style.display = "none"
             break;
@@ -306,35 +308,40 @@ function area4DisplayPage(index) {
             break;
         case 16:
             dmail1Scene4DialogueCharacterName.innerHTML = "Moeka"
-            writeOn(` « T'en a pas assez fait? Degage!! » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            gameContainerDmail1Scene4.style.
+            backgroundImage = "url(../assets/bg/moekahouse/BG34N2.PNG)"
+            characterSpriteScene4.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb05a.png">`
+            writeOn(` « T'en a pas assez fait? Dégage!! » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 17:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Ecoute je sais, je suis vraiment desole pour tantot... mais faudrait que tu cooperes un peu plus stp. » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` « Écoute je sais, je suis vraiment désolé pour tantôt... mais faudrait que tu coopères un peu plus stp. » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 18:
             dmail1Scene4DialogueCharacterName.innerHTML = "Moeka"
-            writeOn(` « Grrrrr pourquoi devrai-je t'ecouter? » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb03a.png">`
+            writeOn(` « Grrrrr pourquoi devrai-je t'écouter? » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 19:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Parce que je te l'ai deja dit. Je veux sauver Mayuri. Si tu ne m'aides pas, je vais jamais pouvoir la sauver. Je suis pret a combattre le destin, je ne vais pas abandonner Mayuri. » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` « Parce que je te l'ai déjà dit. Je veux sauver Mayuri. Si tu ne m'aides pas, je vais jamais pouvoir la sauver. Je suis pret a combattre le destin, je ne vais pas abandonner Mayuri. » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 20:
             dmail1Scene4DialogueCharacterName.innerHTML = ""
-            writeOn(` Je ne peux pas abandonner Mayuri, pas rendu la... encore un petit effort, aller... `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` Je ne peux pas abandonner Mayuri, pas rendu là... encore un petit effort, aller... `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 21:
             dmail1Scene4DialogueCharacterName.innerHTML = "Moeka"
-            writeOn(` « Je suis desole... je n'ecoute que FB. » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb03a.png">`
+            writeOn(` « Je suis désolé... je n'écoute que FB. » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 22:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
-            writeOn(` « Mais c'est qui ce ptn de FB? » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` « Mais c'est qui ce de FB? » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 23:
             dmail1Scene4DialogueCharacterName.innerHTML = "Moeka"
-            writeOn(` « Il m'a sauve, il m'a donne une place ou vivre, un travail. C'est lui qui nous donne les ordres, comme d'aller chercher le IBM 500, il se trouve actuellement au coinlockers- » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(` « Il m'a sauvé, il m'a donné une place où vivre, un travail. C'est lui qui nous donné les ordres, comme d'aller chercher le IBM 500, il se trouve actuellement au coinlocker- » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 24:
             dmail1Scene4DialogueCharacterName.innerHTML = "Rintaro"
@@ -342,11 +349,12 @@ function area4DisplayPage(index) {
             break;
         case 25:
             dmail1Scene4DialogueCharacterName.innerHTML = "Moeka"
+            characterSpriteScene3.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb0xx.png">`
             writeOn(` « NOOOOOOO- » `, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 26:
             dmail1Scene4DialogueCharacterName.innerHTML = ""
-            writeOn(`Je la frappa a nouveau et sorti. Je vais attendre que FB vienne chercher le IBM 500 au coinlockers. Il ne pourra pas m'echapper.`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
+            writeOn(`Je la frappa à nouveau et sorti. Je vais attendre que FB vienne chercher le IBM 500 au coinlockers. Il ne pourra pas m'échapper.`, "dmail1Scene4DialogueText.innerHTML", 70, true, "page")
             break;
         case 27:
             cleanArea()
@@ -358,6 +366,9 @@ const gameContainerDmail1Scene5 = document.getElementById("gameContainerDmail1Sc
 const dmail1Scene5DialogueText = document.querySelector("#gameContainerDmail1Scene5 .dialogue p")
 const dmail1Scene5DialogueCharacterName = document.querySelector("#gameContainerDmail1Scene5 .dialogue .characterName")
 const characterSpriteScene5 = document.querySelector("#gameContainerDmail1Scene5 .characterSpriteCenter")
+const characterSpriteScene5L = document.querySelector("#gameContainerDmail1Scene5 .characterSpriteLeft")
+const characterSpriteScene5R = document.querySelector("#gameContainerDmail1Scene5 .characterSpriteRight")
+
 
 function startArea5(){
     gameContainerDmail1Scene4.style.display = "none"
@@ -368,6 +379,117 @@ function startArea5(){
 function area5DisplayPage(index) {
     switch (index) {
         case 0:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(` FB... il devrait venir chercher le IBM 500 d'une mminute à l'autre. `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 1:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(`«  »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 2:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Braun"
+            characterSpriteScene5R.innerHTML = `<img src="../assets/char/TEN/ten_bla01a.png">`
+            writeOn(`« Ahh quelle belle journée pour venir chercher le- »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 3:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(` Mais qu'est-ce que- Braun!? Que fait-il ici à cet heure? `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 4:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Braun"
+            characterSpriteScene5R.innerHTML = `<img src="../assets/char/TEN/ten_bla03a.png">`
+            writeOn(`« Rintaro? Tu fais quoi ici? »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 5:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Rintaro"
+            writeOn(`« Je me posais la même question pour toi. T'utilises un de ses coinlockers? »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 6:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Braun"
+            characterSpriteScene5R.innerHTML = `<img src="../assets/char/TEN/ten_bla01a.png">`
+            writeOn(`« Je suis juste venu chercher un certain objet dans mon coinlocker, rien de plus normal. »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 7:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(`« C'est étrange... quelque chose me dit qu'il ment... ou peut-être est-ce qu'un pure hasard qu'il soit là à cet heure? »`, "dmail1Scene5DialogueText.innerHTML", 50, true, "page")
+            break;
+        case 8:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Braun"
+            characterSpriteScene5R.innerHTML = `<img src="../assets/char/TEN/ten_bla01a.png">`
+            writeOn(`« Bon pas grave, je devrais me dépecher à prendre mon truc, il se fait tard. »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 9:
+            gameContainerDmail1Scene5.style.backgroundImage = "url(../assets/bg/coinlocker/BG21NR1.PNG)"
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            characterSpriteScene5R.innerHTML = "none"
+            writeOn(` Je le vis se diriger vers le casier du coin en bas à droite... l'emplacement du IBM 500!!! `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 10:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Moeka"
+            characterSpriteScene5L.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb03a.png">`
+            writeOn(`« Rintaro, c'est lui... »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 11:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Braun"
+            characterSpriteScene5R.innerHTML = `<img src="../assets/char/TEN/ten_bla02a.png">`
+            writeOn(`« Hm? À qui ai-je l'honneur? »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 12:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(`Non, c'est impossible. Braun ne peut pas être- Et qu'est-ce que Moeka fait ici!? `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 13:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Moeka"
+            characterSpriteScene5L.innerHTML = `<img src="../assets/char/MOE\\std/moe_alb03a.png">`
+            writeOn(`« C'est FB. »`, "dmail1Scene5DialogueText.innerHTML", 100, true, "page")
+            break;
+        case 14:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(` Il y a eu un moment de silence quand soudain, Braun éclata de rire. `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 15:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Braun"
+            characterSpriteScene5R.innerHTML = `<img src="../assets/char/TEN/ten_bla01a.png">`
+            writeOn(`« HAHAHAHAHAHA! C'est pas vrai, ils m'ont démasqué. Peu importe comment vous avez fait, mais c'est fini tôt pour moi... adios. »`, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 16:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            characterSpriteScene5R.innerHTML = "none"
+            characterSpriteScene5L.innerHTML = "none"
+            writeOn(` Braun s'en alla... disparaissant dans le noir d'une rue suspicieuse... laissant échapper son cellulaire...! `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 17:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(` Son cellulaire! Mais oui! C'est ça la solution! Je ramassa son cellulaire et me dépêcha à- `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 18:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(` Oh non! Il faut son mot de passe pour ouvrir son cellulaire! Vite, ça devrait être se trouver entre un nombre de 1 à 10! `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 19:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(`Veuillez entrez un nombre. Il vous reste 3 chances. `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 20:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(`Ça y est, je l'ai ouvert! Il ne me reste qu'à envoyer un message à Moeka disant de ne pas aller chercher le IBM 500! `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 21:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(`Je sorti mon cellulaire et appela Kurisu. Cette fois-ci, ça va marcher, j'en suis sûre. `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 22:
+            dmail1Scene5DialogueCharacterName.innerHTML = "Kurisu"
+            writeOn(`« Quand tu veux! » `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 23:
+            dmail1Scene5DialogueCharacterName.innerHTML = ""
+            writeOn(`Aller, dis moi que ça marche... `, "dmail1Scene5DialogueText.innerHTML", 70, true, "page")
+            break;
+        case 24:
+            window.location.replace("../dmail2/index.html")
+
+
 
     }
 }
