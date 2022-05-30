@@ -18,7 +18,7 @@
     </div>
     <div id="initialMenuSelections">
         <div class="menuButton" id="startButton" onclick="startPrologue()"></div>
-        <div class="menuButton" id="configButton"></div>
+        <div class="menuButton" id="configButton" onclick="openConfig()"></div>
         <div class="menuButton" id="helpButton"></div>
     </div>
 </div>
@@ -32,6 +32,26 @@
             Félix et Chris
         </div>
     </div>
+</div>
+<div class="gameContainer" id="gameContainerConfigMenu">
+    <h1>Configuration</h1>
+    <div id="volumeSettings">
+        <label for="gameVolume">Volume: </label>
+        <input type="range" name="gameVolume" id="gameVolume" min="0" max="100">
+    </div>
+    <div id="textTone">
+        <label for="textToneChoice">Choix de sonnerie pour le cellulaire: </label>
+        <select name="textToneChoice" id="textToneChoice">
+            <option value="0">Beginning of Light</option>
+            <option value="1">Easygoingness</option>
+            <option value="2">GATE OF STEINER</option>
+            <option value="3">Over the sky</option>
+            <option value="4">Precaution</option>
+            <option value="5">Reunion</option>
+            <option value="6">Village</option>
+        </select>
+    </div>
+    <input type="button" value="Sauvegarder" onclick="saveConfig()">
 </div>
 <div class="gameContainer" id="gameContainerVideoPrologue">
     <video src="./assets/gfx/prologue02.mp4" id="prologueVideo"></video>

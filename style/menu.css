@@ -107,3 +107,49 @@
     width: 1280px;
     height: 720px;
 }
+
+#gameContainerConfigMenu {
+    display: none;
+    background: radial-gradient(circle, rgba(181,181,181,1) 0%, rgba(93,93,93,1) 100%);
+    color: white;
+}
+
+#gameContainerConfigMenu input[type=range] {
+    background-color: red;
+    width: 200px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#gameContainerConfigMenu div {
+    margin: 50px;
+}
+
+#gameContainerConfigMenu h1 {
+    margin: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+#gameContainerConfigMenu input[type=button] {
+    margin: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 30px;
+    color: white;
+    background-color: black;
+}
+#gameContainerConfigMenu input[type=button]:hover {
+    border-radius: 10px;
+    border: 2px black solid;
+    height: 30px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#textToneChoice {
+    border-radius: 10px;
+    height: 40px;
+    margin-left: 10px;
+}

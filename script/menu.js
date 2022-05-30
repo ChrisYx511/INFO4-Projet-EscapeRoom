@@ -101,6 +101,9 @@ function prologue1DisplayPage(index) {
             writeOn(`L'histoire jusqu'à date: Okabe a réussi à défaire tous les messages envoyé dans le passé par ses amis à date pour déjouer SERN (Société Européenne de Recherche Nucléaire) et ses agents, les Rounders. Ce n'était pas sans sacrifices, mais malgré tout, il a réussi. Maintenant, les deux derniers posent une plus grande difficulté: Le contenu du premier et les détails pour renverser le deuxième sont inconnus.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
             break;
         case 5:
+            writeOn(`Contrôles de base: Entrer ou Click Gauche pour avancer le texte et intéragir.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
+            break;
+        case 6:
             writeOn(`Des informations plus amples sont disponibles dans la section «Help» du menu principal. Bonne chance! El psy kongroo.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
             break;
         case 6:
@@ -137,3 +140,32 @@ function startLevel1() {
     gameProgress++
     window.location.replace("./dmail1/index.html") 
 }
+
+const gameContainerConfigMenu = document.getElementById("gameContainerConfigMenu")
+const gameVolume = document.getElementById("gameVolume")
+const textToneChoice = document.getElementById("textToneChoice")
+function openConfig() {
+    gameContainerInitialMenu.style.display = "none"
+    gameContainerConfigMenu.style.display = "inherit"
+    if (cookieSelectedTextTone != "") {
+        textToneChoice.value = cookieSelectedTextTone
+    } else {
+        textToneChoice.value = 3
+    }
+    if (cookieVolume != "") {
+        gameVolume.value = cookieVolume * 100
+    } else {
+        gameVolume.value = 75
+    }
+    
+}
+
+function saveConfig() {
+    volume = Number(gameVolume.value) / 100
+    document.cookie = `volume=${volume};expires=Sun, 11 May 2036 12:00:00 UTC; path=/`
+    selectedTextTone = Number(textToneChoice.value) 
+    document.cookie = `textTone=${selectedTextTone};expires=Sun, 11 May 2036 12:00:00 UTC; path=/`
+    gameContainerInitialMenu.style.display = "inherit"
+    gameContainerConfigMenu.style.display = "none   "
+}
+

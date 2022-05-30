@@ -1,7 +1,22 @@
 const menuMusic = new Audio("assets/sound/menu/bgm.ogg")
-let selectedRingtone = 2
-let selectedTextTone = 3
-let volume = 0.75
+// Not implemented
+//let selectedRingtone = 2
+let selectedTextTone
+let volume
+
+let cookieSelectedTextTone = getCookie("textTone")
+let cookieVolume = getCookie("volume")
+
+if (cookieSelectedTextTone != "") {
+    selectedTextTone = cookieSelectedTextTone
+} else {
+    selectedTextTone = 3
+}
+if (cookieVolume != "") {
+    volume = cookieVolume
+} else {
+    volume = 0.75
+}
 
 let opPlayTimeout
 
@@ -118,3 +133,15 @@ function returnRingtone(index) {
             return "assets/sound/ringtones/Village.ogg"
     }
 }
+
+function getCookie(user) {
+    let cookieArr = document.cookie.split(";");
+    for(let i = 0; i < cookieArr.length; i++) {
+        let cookiePair = cookieArr[i].split("=");
+        if(user == cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    return null;
+}
+
