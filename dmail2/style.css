@@ -1,3 +1,4 @@
+/* Chris Yang - 2022-05-29 - DMAIL 2 (NIVEAU 2) */
 #gameContainerDmail2Scene1 {
     background-color: black;
 }
@@ -32,19 +33,20 @@
     display: none;
 }
 
-#ibm5100BoxLocation {
+#ibn5100BoxLocation {
     position: absolute;
     width: 60px;
     height: 45px;
     left: 338px;
     top: 10px;
     border: 2px #55574f solid;
-    color: #55576f;
+    color: #55575f;
     display: none;
     transform: rotate(9deg);
+    font-size: small;
 }
 
-#ibm5100BoxLocation:hover {
+#ibn5100BoxLocation:hover {
     cursor: pointer;
 }
 
@@ -62,4 +64,39 @@
     right: 0;
     left: 0;
     bottom: 0;
+}
+#gameContainerDmail2Scene7 {
+    background-image: url(../assets/bg/labo/BG02A1.PNG);
+    display: none;
+}
+#gameContainerDmail2Scene8 {
+    background-image: url(../assets/bg/radikan/BG11A3.PNG);
+    display: none;
+}
+.quiz {
+    display: none;
+    margin: 20px;
+}
+
+.quiz input:hover {
+    cursor: pointer;
+}
+#area7Phone {
+    background-image: url(../assets/gfx/phone8-13.png);
+}
+#area7Phone:hover {
+    cursor: pointer;
+}
+
+#area2Phone {
+    background-image: url(../assets/gfx/phone8-15.png);
+}
+
+#gameContainerEndingVideo {
+    display: none;
+}
+
+#endingVideo {
+    width: 1280px;
+    height: 720px;
 }

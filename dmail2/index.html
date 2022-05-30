@@ -1,10 +1,11 @@
+<!-- Chris Yang - 2022-05-29 - DMAIL 2 (NIVEAU 2) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 2</title>
+    <title>Steins;Gate - Rebirth of lost theory Project FG133</title>
     <link rel="stylesheet" href="../style/global.css">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -18,7 +19,6 @@
             <div class="characterName"></div>
         </div>
     </div>
-    <!-- Area 2 -->
     <div class="gameContainer" id="gameContainerDmail2Scene2">
         <div class="characterSpriteCenter"></div>
         <div class="characterSpriteLeft"></div>
@@ -27,7 +27,7 @@
             <p></p>
             <div class="characterName"></div>
         </div>
-        <div class="phone"></div>
+        <div class="phone" id="area2Phone"></div>
         <div class="cellPhone">
             <div class="phoneMailDetails" id="dmail2Scene2Msg1">
                 <div class="phoneMailMetadata">
@@ -74,8 +74,7 @@
             <p></p>
             <div class="characterName"></div>
         </div>
-        <div class="phone"></div>
-        <div id="ibm5100BoxLocation" onclick="area5DisplayPage(4);page = 4;currentPage = 4">
+        <div id="ibn5100BoxLocation" onclick="area5DisplayPage(4);page = 4;currentPage = 4">
             IBM 5100
         </div>
     </div>
@@ -87,7 +86,84 @@
             <p></p>
             <div class="characterName"></div>
         </div>
-        <div class="phone"></div>
+    </div>
+    <div class="gameContainer" id="gameContainerDmail2Scene7">
+        <div class="characterSpriteCenter"></div>
+        <div class="characterSpriteLeft"></div>
+        <div class="characterSpriteRight"></div>
+        <div class="dialogue">
+            <p></p>
+            <div class="characterName"></div>
+            <div id="quiz1" class="quiz">
+                <select name="quiz1Answers" id="quiz1Answers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <input type="button" value="Soumettre" onclick="area7ValidateAnswers1()"> 
+            </div>
+            <div class="quiz" id="quiz2">
+                <select name="quiz2Answers" id="quiz2Answers">
+                    <option value="1">Rien ne changera si j'annule ce dmail </option>
+                    <option value="2">Kurisu cessera d'exister</option>
+                    <option value="3">Mayuri continuera de mourir</option>
+                    <option value="4">SERN établiera une dystopie</option>
+                </select>
+            <input type="button" value="Soumettre" onclick="area7ValidateAnswers2()"> 
+            </div>
+        </div>
+        <div class="cellPhone">
+            <div class="phoneMailMenu" style="display: inherit;">
+                <div>
+                    <h3>Re: Re: Re: Re: IBN 5100</h3>
+                    <h4>Shining Finger - 08/10</h4>
+                    <p>J'ai toujours aucune idée *shrug* Mais si tu tr...</p>
+                </div>
+                <div>
+                    <h3>(Sans sujet)</h3>
+                    <h4>sdhfsd4521@sgk.coawer.fr - 08/09</h4>
+                    <p>Tu en sais trop.</p>
+                </div>
+                <div>
+                    <h3>(° °)</h3>
+                    <h4>Assistante - 08/12</h4>
+                    <p>Je suis arrivé au lab ce matin et il y'avais pers...</p>
+                </div>
+                <div>
+                    <h3>Le nouveau anime de Rainet!!!</h3>
+                    <h4>Mayuri - 07/31</h4>
+                    <p>Tutturu! Je sais que tu n'aime pas tant Rainet, mais...</p>
+                </div>
+                <div>
+                    <h3>RE: Trouble</h3>
+                    <h4>Daru - 07/21</h4>
+                    <p>« Quelqu'un a poignardé Kurisu Makise » ??, quoi??? Et p...</p>
+                </div>
+                <div>
+                    <h3>(Sans sujet)</h3>
+                    <h4>sg-epk@jtk93.x29.jp - 07/28</h4>
+                    <p>(Sans contenu)</p>
+                </div>
+            </div>
+        </div>
+        <div class="phone" id="area7Phone" onclick="area7TogglePhone()"></div>
+
+    </div>
+    <div class="gameContainer" id="gameContainerDmail2Scene8">
+        <div class="characterSpriteCenter"></div>
+        <div class="characterSpriteLeft"></div>
+        <div class="characterSpriteRight"></div>
+        <div class="dialogue">
+            <p></p>
+            <div class="characterName"></div>
+        </div>
+    </div>
+    <div class="gameContainer" id="gameContainerEndingVideo">
+        <video id="endingVideo" src="../assets/gfx/ending-final.mp4"></video>  
+    </div>
 </div>
 </div>
     <script src="../script/global.js"></script>

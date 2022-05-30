@@ -99,7 +99,7 @@ function cleanArea() {
     writeOnListener = new AbortController()
     nextPageListener = new AbortController()
 }
-
+/** Returns the relative path of ringtone files */
 function returnRingtone(index) {
     switch (index) {
         case 0:
