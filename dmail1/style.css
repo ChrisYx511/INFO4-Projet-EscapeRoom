@@ -14,3 +14,11 @@
     background-image: url(../assets/bg/moekahouse/BG33N.PNG);
     display: none;
 }
+#gameContainerDmail1Scene4 {
+    background-image: url(../assets/bg/moekahouse/BG33N.PNG);
+    display: none;
+}
+#voiceOnlyArea4 {
+    background-image: url(../assets/gfx/voiceOnly.jpg);
+    display: none;
+}
