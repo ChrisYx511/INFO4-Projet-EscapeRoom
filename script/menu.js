@@ -12,7 +12,7 @@ const startExplainationDialogueParagraph = document.querySelector("#startExplain
 const prologueVideo = document.getElementById("prologueVideo")
 
 const menuListeners = new AbortController()
-// Lorsque le jeu est laissé sur le menu pour 30sec, intro joue
+// Lorsque le jeu est laissé sur le menu pour 30sec, intro joue, s'arrête lorsque souris ou Entrer est appuyé
 function launchGame() {
     gameContainerPreStart.style.display = "none"
     gameContainerInitialMenu.style.display ="inherit"
