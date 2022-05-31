@@ -64,7 +64,7 @@ function area2DisplayPage(index) {
             break;
         case 1:
             area2CharacterSpriteCenter.innerHTML = `<img src="../assets/char/MOE/std/moe_alb01a.png" alt="">`
-            writeOn(`Silencieuse, comme d'habitude, et sans blessures mortelles. Tout semble correct.`, "area2Text.innerHTML", 20, true, "page")
+            writeOn(`Silencieuse, comme d'habitude. Tout semble correct.`, "area2Text.innerHTML", 20, true, "page")
             break;
         case 2:
             area2CharacterSpriteCenter.innerHTML = `<img src="../assets/char/MOE/std/moe_ala01a.png" alt="">`

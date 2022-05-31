@@ -1,18 +1,19 @@
-const menuMusic = new Audio("assets/sound/menu/bgm.ogg")
 // Not implemented
 //let selectedRingtone = 2
 let selectedTextTone
 let volume
+let cookieSelectedTextTone
+let cookieVolume
 
-let cookieSelectedTextTone = getCookie("textTone")
-let cookieVolume = getCookie("volume")
+cookieSelectedTextTone = getCookie("textTone")
+cookieVolume = getCookie("volume")
 
-if (cookieSelectedTextTone != "") {
+if (cookieSelectedTextTone !== null) {
     selectedTextTone = cookieSelectedTextTone
 } else {
     selectedTextTone = 3
 }
-if (cookieVolume != "") {
+if (cookieVolume !== null) {
     volume = cookieVolume
 } else {
     volume = 0.75
@@ -133,12 +134,16 @@ function returnRingtone(index) {
             return "assets/sound/ringtones/Village.ogg"
     }
 }
-
-function getCookie(user) {
+/**
+ * Get cookie value
+ * @param {String} cookieName 
+ * @returns Value of the cookie or null if it doesn't exist
+ */
+function getCookie(cookieName) {
     let cookieArr = document.cookie.split(";");
     for(let i = 0; i < cookieArr.length; i++) {
         let cookiePair = cookieArr[i].split("=");
-        if(user == cookiePair[0].trim()) {
+        if(cookieName === cookiePair[0].trim()) {
             return decodeURIComponent(cookiePair[1]);
         }
     }

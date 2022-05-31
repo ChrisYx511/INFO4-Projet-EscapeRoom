@@ -1,3 +1,4 @@
+const menuMusic = new Audio("assets/sound/menu/bgm.ogg")
 const gameContainerPreStart = document.getElementById("gameContainerPreStart")
 const gameContainerInitialMenu = document.getElementById("gameContainerInitialMenu")
 const gameContainerOpeningVideo = document.getElementById("gameContainerOpeningVideo")
@@ -106,7 +107,7 @@ function prologue1DisplayPage(index) {
         case 6:
             writeOn(`Des informations plus amples sont disponibles dans la section «Help» du menu principal. Bonne chance! El psy kongroo.`, "startExplainationDialogueParagraph.innerHTML", 10, true, "page")
             break;
-        case 6:
+        case 7:
             //Séquence terminée
             cleanArea()
             playPrologueVideo()
@@ -147,12 +148,12 @@ const textToneChoice = document.getElementById("textToneChoice")
 function openConfig() {
     gameContainerInitialMenu.style.display = "none"
     gameContainerConfigMenu.style.display = "inherit"
-    if (cookieSelectedTextTone != "") {
+    if (cookieSelectedTextTone != null) {
         textToneChoice.value = cookieSelectedTextTone
     } else {
         textToneChoice.value = 3
     }
-    if (cookieVolume != "") {
+    if (cookieVolume != null) {
         gameVolume.value = cookieVolume * 100
     } else {
         gameVolume.value = 75
@@ -162,10 +163,12 @@ function openConfig() {
 
 function saveConfig() {
     volume = Number(gameVolume.value) / 100
-    document.cookie = `volume=${volume};expires=Sun, 11 May 2036 12:00:00 UTC; path=/`
+    document.cookie = `volume=${volume};expires=Sun, 11 May 2036 12:00:00 UTC; SameSite=Strict; path=/`
     selectedTextTone = Number(textToneChoice.value) 
-    document.cookie = `textTone=${selectedTextTone};expires=Sun, 11 May 2036 12:00:00 UTC; path=/`
+    document.cookie = `textTone=${selectedTextTone};expires=Sun, 11 May 2036 12:00:00 UTC; SameSite=Strict; path=/`
     gameContainerInitialMenu.style.display = "inherit"
-    gameContainerConfigMenu.style.display = "none   "
+    gameContainerConfigMenu.style.display = "none"
+    cookieSelectedTextTone = getCookie("textTone")
+    cookieVolume = getCookie("volume")
+    menuMusic.volume = volume
 }
-

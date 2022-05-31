@@ -14,47 +14,12 @@
     <div class="characterSpriteCenter">
     </div>
     <div class="phone"></div>
-    <div class="cellPhone">
-        <div class="phoneMailMenu">
-            <div>
-                <!-- Sujet -->
-                <h3>WHERE TF IS MY YOGURT?</h3>
-                <!-- Envoyeur -->
-                <h4>Assistant</h4>
-                <!-- Résumé -->
-                <p>blah blah</p>
-            </div>
-            <div>
-                <h3>Re: IBM5100</h3>
-                <h4>Shining Finger</h4>
-                <p>blah blah</p>
-            </div>
-            <div>
-                <h3>Mail 1</h3>
-                <p>blah blah</p>
-            </div>
-            <div>
-                <h3>Mail 1</h3>
-                <p>blah blah</p>
-            </div>
-        </div>
-        <div class="phoneMailDetails">
-            <div class="phoneMailMetadata">
-                <strong>Reçu:</strong> 2022-05-24 13:24 <br>
-                <strong>De:</strong> Shining Finger <br>
-                <strong>Sujet:</strong> Re: IBM5100 <br>
-            </div>
-            <!-- Contenu -->
-            <p>Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100? Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?Est-ce que t'a trouvé le IBM5100?</p>
-        </div>
-    </div>
     <div class="dialogue" id="dmail1Scene1Dialogue">
         <p></p>
         <div class="characterName">
             Rintaro
         </div>
     </div>
-    SOmething under
 </div>
 
 <div class="gameContainer" id="gameContainerDmail1Scene2">
@@ -87,8 +52,10 @@
         <p></p>
         <div class="characterName"></div>
     </div>
-    <div class="cellPhone" id="cellulaireArea4"></div>
-    <div class="phoneMailDetails" id="voiceOnlyArea4"></div>
+    <div class="cellPhone" id="cellulaireArea4">  
+        <div class="phoneMailDetails" id="voiceOnlyArea4"></div>
+    </div>
+
 </div>
 
 <div class="gameContainer" id="gameContainerDmail1Scene5">
@@ -97,8 +64,17 @@
     <div class="characterSpriteRight"></div>
     <div class="dialogue">
         <p></p>
+        <div id="dmail1Area5Quiz">
+            <label for="dmail1Area5QuizAnswer">Réponse: </label>
+            <input type="text" id="dmail1Area5QuizAnswer">
+            <input type="button" value="Soumettre" id="dmail1Area5QuizSubmit" onclick="dmail1Area5QuizHandler()">
+        </div>
         <div class="characterName"></div>
     </div>
+    <div class="cellPhone" id="cellulaireArea5">  
+        <div class="phoneMailDetails" id="voiceOnlyArea5"></div>
+    </div>
+
 </div>
 
 <script src="../script/global.js"></script>

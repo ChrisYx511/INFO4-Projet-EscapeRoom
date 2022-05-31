@@ -16,11 +16,30 @@
     background-image: url(../assets/bg/moekahouse/BG33N.PNG);
     display: none;
 }
+
+
 #voiceOnlyArea4 {
     background-image: url(../assets/gfx/voiceOnly.jpg);
-    display: none;
+}
+
+#voiceOnlyArea5 {
+    background-image: url(../assets/gfx/voiceOnly.jpg);
 }
 #gameContainerDmail1Scene5 {
     background-image: url(../assets/bg/coinlocker/BG21N.PNG);
     display: none;
 }
+
+#dmail1Area5Quiz {
+    display: none;
+    margin: 20px;
+}
+
+#dmail1Area5QuizSubmit:hover {
+    cursor: pointer;
+}
+
+.phone {
+    background-image: url(../assets/gfx/phone8-11.png);
+}
+
