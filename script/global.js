@@ -9,12 +9,12 @@ cookieSelectedTextTone = getCookie("textTone")
 cookieVolume = getCookie("volume")
 
 if (cookieSelectedTextTone !== null) {
-    selectedTextTone = cookieSelectedTextTone
+    selectedTextTone = Number(cookieSelectedTextTone)
 } else {
     selectedTextTone = 3
 }
 if (cookieVolume !== null) {
-    volume = cookieVolume
+    volume = Number(cookieVolume)
 } else {
     volume = 0.75
 }
